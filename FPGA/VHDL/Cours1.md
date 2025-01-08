@@ -137,9 +137,9 @@ Avec `WITH` et `SELECT` : Equivalent au **switch** en [C](https://github.com/Plu
 
 ```vhdl
 WITH choix SELECT 
-    nomPortA <= valeur1 WHEN choix1 ELSE,
-                valeur2 WHEN choix2 ELSE,
-                valeur3 WHEN choix3 ELSE,
+    nomPortA <= valeur1 WHEN choix1,
+                valeur2 WHEN choix2,
+                valeur3 WHEN choix3,
                 valeur0 WHEN others;
 ```
 
