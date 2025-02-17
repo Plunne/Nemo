@@ -36,6 +36,26 @@ void addValue(link_t **in_list, int in_newValue)
     *in_list = addLink;
 }
 
+int delValue(link_t **in_list)
+{
+    int retVal = 0;
+    link_t *p_tmpNext;
+
+    if (*in_list == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    p_tmpNext = (*in_list)->next;
+    retVal = (*in_list)->value;
+
+    free(*in_list);
+
+    *in_list = p_tmpNext;
+
+    return retVal;
+}
+
 link_t* create_list(int* in_list, unsigned int in_size)
 {
     link_t *out_list = new();
